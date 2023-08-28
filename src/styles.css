@@ -10,7 +10,7 @@
 
 body { 
     /* background-image: url('assets/img/background.JPG')!important;  */
-    background-color: rgb(19, 12, 80) !important;
+    /* background-color: rgb(19, 12, 80) !important; */
     /* background: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.7)), url("/assets/img/background.jpg"); */
 } 
 
@@ -61,9 +61,16 @@ body {
 
 table { width: auto; table-layout: fixed; } 
 
-th, td { overflow: hidden; width: auto; text-overflow: ellipsis; white-space: nowrap; font-size: 120%;}
+
+th, td { 
+    overflow:hidden; 
+    width:auto; 
+    text-overflow:ellipsis; 
+    white-space: nowrap; 
+    font-size: 1vw;
+}
   
-.mat-mdc-form-field {font-size: 14px; width: 100%;}
+.mat-mdc-form-field {font-size: 1vw; width: 100%;}
 
 html, body { height: 100%; }
 
