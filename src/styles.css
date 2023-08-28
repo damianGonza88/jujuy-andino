@@ -1,1 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* reseteo css  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body { 
+    /* background-image: url('assets/img/background.JPG')!important;  */
+    background-color: rgb(19, 12, 80) !important;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.7)), url("/assets/img/background.jpg"); */
+} 
+
+.logo{  
+    width: 6%;
+}
+
+.centrar {
+    display: flex;
+    text-align: center;    
+}
+.efecto:hover{
+    transform: scale(125%) ;
+}
+
+.borde{
+    border-color: black;
+}
+  
+.centrarDiv{
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.iconoRed{
+    width: 15%;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+.loginBox{
+    width: 300px;
+    height: 330px;
+    background: rgb(24, 46, 241);
+    color: white;
+    top: 15%;
+    right: 40%;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 30px 30px;
+    border-radius: 20px;
+}
+
+.input{font-size: 1.1vw;}
+
+/* Structure */
+
+table { width: auto; table-layout: fixed; } 
+
+th, td { overflow: hidden; width: auto; text-overflow: ellipsis; white-space: nowrap; font-size: 120%;}
+  
+.mat-mdc-form-field {font-size: 14px; width: 100%;}
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.texto{
+    color: white;
+    font-size: large;
+}
+
+.labelText{
+    margin-top: 10px;
+    color: white; 
+    font-size: large;
+}

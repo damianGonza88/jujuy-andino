@@ -1,0 +1,23 @@
+<div>
+    <br><br>
+
+    <div class="loginBox">
+
+        <h2 class="texto centrarDiv">Ingresar</h2>
+
+        <form class="form-goup row" #miFormulario="ngForm" (ngSubmit)="login(miFormulario)" style="width: 350px;">
+               
+            <label for="">Email:</label>
+            <input class="form-control" style="width: 60%;" type="email" name="email" placeholder="E-mail" ngModel>        
+    
+     
+            <label for="" style="margin-top: 10px;">Contraseña:</label>
+            <input class="form-control" style="width: 60%;" type="password" name="password" placeholder="Contraseña" ngModel>
+   
+            <button class="for-mcontrol centrarDiv" style="width: 50%; margin-top: 30px;margin-left: 12%; " class="btn btn-primary" type="submit">Entrar</button>
+      
+        </form>
+
+    </div>
+    
+</div>
