@@ -14,10 +14,16 @@ export class ComponenteSociosComponent implements OnInit{
   titulo = 'Jujuy Andino';
   filterPost="";
   buscarApellido='';
-  mes: number = new Date().getMonth();
-    
+  mes: number = new Date().getMonth()+1;
+  anio: number = new Date().getFullYear();
+  hoy: string = new Date().toDateString();
+  inicioDeMes: string ="";
+      
 
   fechaComparacion: string = ""; //mm-dd-aaaa
+  fechaComparacionEstudios: string = ""; //mm-dd-aaaa
+  fechaComparacionEstudiosAtrasados = ""; //mm-dd-aaaa
+  finMesPasado="";
   checkboxcabecera: boolean=false;
 
   socios:Socio[]=[];
@@ -32,27 +38,41 @@ export class ComponenteSociosComponent implements OnInit{
     this.socioService.obtenerSocios().subscribe(misSocios=>{
       this.socios = Object.values(misSocios);
       this.socioService.setSocios(this.socios); 
-      this.dataSource = this.socios;
-      if (this.mes == 0) {
-        this.mes = 12; 
-      } 
-      //FECHA DE VENCIMIENTO
-      this.fechaComparacion= this.mes.toString()+"-30"+"-2023"; //mm-dd-aaaa
-    });
 
-    
+
+      //DATOS A MOSTRAR EN TABLA
+      this.dataSource = this.socios;
+
+      // if (this.mes == 0) {
+      //   this.mes = 12; 
+      // } 
+      
+      //FECHA DE VENCIMIENTO CUOTA
+      this.fechaComparacion= ((this.mes).toString())+"-10-"+this.anio; //mm-dd-aaaa
+
+      //FECHA DE VENCIMIENTO ESTUDIOS
+      this.fechaComparacionEstudios= "04-01-"+ this.anio; //mm-dd-aaaa
+
+      //FECHA DE VENCIMIENTO ESTUDIOS ATRASADOS
+      this.fechaComparacionEstudiosAtrasados = "12-31-"+ (this.anio-1); //mm-dd-aaaa
+
+      //FIN DE MES PASADO
+      this.finMesPasado = (this.mes-1) +"-01-"+this.anio; //mm-dd-aaaa
+      console.log("Hoy: "+this.hoy);
+
+      //INICIO DE MES
+      this.inicioDeMes = this.mes +"-01-"+ this.anio; //mm-dd-aaaa
+      console.log("Inicio de Mes: "+ this.inicioDeMes);
+
+    });    
   } 
 
-  displayedColumns: string[] = ['check','position', 'apellido', 'nombres', 'dni', 'fechaNac', 'edad', 'domicilio', 'telefono', 'fechaIns','cargo', 'cuota', 'estudios' ,'editar'];
-   
-  
+  displayedColumns: string[] = ['check','position', 'apellido', 'nombres', 'dni', 'fechaNac', 'edad', 'domicilio', 'telefono', 'fechaIns','antiguedad', 'cuota', 'estudios' ,'editar'];
+     
   buscaApellido(){
-
-    alert("buscando");
 
     let sociosB = this.socios.filter(e=>e.apellido.toUpperCase().includes(this.buscarApellido.toLocaleUpperCase())    
     )
-    console.log(sociosB);
     this.dataSource = sociosB;
   }
 
@@ -87,12 +107,5 @@ export class ComponenteSociosComponent implements OnInit{
     this.router.navigate(['']);
   }
 
-  estudios(estudio:boolean){
-    if (estudio) {
-      return "SI";
-    } else {
-      return "NO";
-    }
-  }
 
 }

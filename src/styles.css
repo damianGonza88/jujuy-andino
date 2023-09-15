@@ -7,12 +7,15 @@
     box-sizing: border-box;
 }
 
+.claseBody{
+    background-image: url('assets/img/01.jpg');
+    background-position: center center;
+    background-size: cover !important;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: rgb(0, 0, 0);
 
-body { 
-    /* background-image: url('assets/img/background.JPG')!important;  */
-    /* background-color: rgb(19, 12, 80) !important; */
-    /* background: linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.7)), url("/assets/img/background.jpg"); */
-} 
+}
 
 .logo{  
     width: 6%;
@@ -27,7 +30,8 @@ body {
 }
 
 .borde{
-    border-color: black;
+    border: 2px solid #be7200;
+    border-radius: 10px;
 }
   
 .centrarDiv{
@@ -47,42 +51,99 @@ body {
     height: 330px;
     background: rgb(24, 46, 241);
     color: white;
-    top: 15%;
-    right: 40%;
-    position: absolute;
-    box-sizing: border-box;
-    padding: 30px 30px;
     border-radius: 20px;
 }
 
 .input{font-size: 1.1vw;}
 
-/* Structure */
-
-table { width: auto; table-layout: fixed; } 
-
+/* table { width: auto; table-layout: fixed; } 
+  
+.mat-mdc-form-field { width: 100%;}*/
 
 th, td { 
     overflow:hidden; 
-    width:auto; 
-    text-overflow:ellipsis; 
-    white-space: nowrap; 
+    width:auto;
+    text-overflow:ellipsis;     
     font-size: 1vw;
+    white-space:nowrap; /* No permite salto de lineas en celdas */
+    vertical-align: middle;
+} 
+
+html {
+    height: 100% !important;
+} 
+body {
+    min-height: 100vh !important;
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
-  
-.mat-mdc-form-field {font-size: 1vw; width: 100%;}
 
-html, body { height: 100%; }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.fondoColor { width: 100%; height: 100%; background-color: rgb(19, 12, 80) !important;}
+
 
 .texto{
     color: white;
     font-size: large;
 }
 
+.texto-borde {
+    -webkit-text-stroke: 2px black;
+    color: white;
+}
+
+.visorImagenes {
+    text-align: center;
+    color: black;
+    background-color: rgba(211,211,211,0.3);;
+}
+
+.textoTabla{
+    font-size: 1vw;
+}
+
 .labelText{
     margin-top: 10px;
     color: white; 
     font-size: large;
+}
+
+.imagenFondo{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+}
+
+.imagenDiv{
+    object-fit: cover;
+    width: 70%;
+    
+}
+
+img:hover {
+    transform: scale(1.1, 1.1);
+    transition: 0.7s;
+  }
+
+.imagenEnlace {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+}
+
+.imagenEnlace:hover {
+    animation: tada;
+    animation-duration: 0.5s;
+}
+
+li {
+    list-style: none;
+}
+
+.active{
+    text-decoration: underline !important;
+}
+
+.divh1{
+    align-items: center; 
+    display: flex;
 }

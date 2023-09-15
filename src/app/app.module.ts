@@ -21,6 +21,8 @@ import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
 import { CookieService } from 'ngx-cookie-service';
 import { LoginGuardian } from './login/login-guardian';
+import { ContableComponent } from './contable/contable.component';
+import { CajaService } from './caja.service';
 
 const appRoutes: Routes=[
 
@@ -30,6 +32,7 @@ const appRoutes: Routes=[
   {path:'actualizar/:id', component: ComponenteActualizarComponent},
   {path:'agregar', component: ComponenteAgregarComponent},
   {path:'login', component: LoginComponent},
+  {path: 'contable', component: ContableComponent, canActivate:[LoginGuardian]},
   {path:'**', component:ComponenteErrorComponent}
   
 
@@ -45,6 +48,7 @@ const appRoutes: Routes=[
     FilterPipe, 
     FiltroPipe, 
     LoginComponent, 
+    ContableComponent, 
   
   ],
   imports: [
@@ -56,7 +60,7 @@ const appRoutes: Routes=[
     MatTableModule,
     MatTableExporterModule    
   ],
-  providers: [SocioService, DataService, LoginService, CookieService, LoginGuardian],
+  providers: [SocioService, DataService, LoginService, CookieService, LoginGuardian, CajaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

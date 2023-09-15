@@ -1,83 +1,97 @@
+<html>
 
-<div style="background-color: rgb(19, 12, 80) !important; height: 100%;">
-  <br><br>
-  <h2 style="color: white; text-align: center; margin: 20px;">Agregar Socio</h2>
-<div class="container mt-2">
-  <div class="row">
-    <div class="col">
-      <form class="form-group row" style="margin: 10px;">
-  
-        <div class="form-group col-md-2" style="margin: 10px;">
-          <label for="apellido" class="labelText">Apellido:</label>
-          <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" [(ngModel)]="cuadroApellido">
-        </div>
-              
-        <div class="form-group col-md-2" style="margin: 10px;">
-          <label for="nombre" class="labelText">Nombre:</label>
-          <input type="text" name="nombre" id="nombre" placeholder="Nombres" class="form-control" [(ngModel)]="cuadroNombre">
-        </div>
-              
-        <div class="form-group col-md-2" style="margin: 10px;">
-          <label for="dni" class="labelText">DNI:</label>
-          <input type="text" name="dni" id="dni" placeholder="" class="form-control" [(ngModel)]="cuadroDni">
-        </div>
-              
-        <div class="form-group col-md-2" style="margin: 10px;">
-          <label for="fechaNac" class="labelText">Fecha de Nacimiento:</label>
-          <input type="date" name="fechaNac" id="fechaNac" placeholder="" class="form-control" [(ngModel)]="cuadroFechaNac">
-        </div>
-              
-        <div class="form-group col-md-2" style="margin: 10px;">
-          <label for="telefono" class="labelText">Telefono:</label>
-          <input type="text" name="telefono" id="telefono" placeholder="Telefono" class="form-control" [(ngModel)]="cuadroTelefono">
-        </div>
-              
-        <div class="form-group col-md-3" style="margin: 10px;">
-          <label for="domicilio" class="labelText">Domicilio:</label>
-          <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio" class="form-control" [(ngModel)]="cuadroDomicilio">
-        </div>
-              
-        <div class="form-group col-md-2" style="margin: 10px;">
-          <label for="fechaIns" class="labelText">Fecha de Ingreso:</label>
-          <input type="date" name="fechaIns" id="fechaIns" placeholder="Fecha de Inscripcion" class="form-control" [(ngModel)]="cuadroFechaIns">
-        </div>
-                
-        <div class="form-group col-md-2" style="margin: 10px;">
-          <label for="cargo" class="labelText">Cargo/Comision:</label>
-          <input type="text" name="cargo" id="cargo" placeholder="Cargo/Comision" class="form-control" [(ngModel)]="cuadroCargo">
-        </div>
-              
-        
-      </form>
-    </div>    
-       
-  </div>
+  <body class="fondoColor">
 
-  <div class="row" style="margin: 10px; width: 50%;">
-    <div class="form-group col" style="margin: 5px; width: 40%;">
-      <label for="cuota" class="labelText">Cuota:</label>
-      <input  type="number" name="cuota" id="cuota" placeholder="Cuota" class="form-control" [(ngModel)]="cuadroCuota">
-    </div>
-
-    <div class="form-group col" style="margin: 5px; width: 40%;">
-      <label for="fechapago" class="labelText">Fecha de Pago:</label>
-      <input type="date" name="fechapago" id="fechapago" placeholder="" class="form-control" [(ngModel)]="cuadroFechaPago">
-    </div>   
-
-    <div class="form-group col" style="margin: 5px; display:flex; align-items: center;">
-      <label for="estudios" class="labelText">{{anoEstudio}}</label>
-      <input type="checkbox" name="estudios" id="estudios" placeholder="" style="margin-left: 10px; width: 20px; height: 20px; margin-top: 10px;" [(ngModel)]="cuadroEstudios">
-    </div> 
+    <div>
+      <br><br>
+      <h2 style="color: white; text-align: center; margin: 20px; font-size: 2vw;">Agregar Socio</h2>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col">
+          <form class="form-group row" style="margin: 10px;">
+      
+            <div class="form-group col-md-2" style="margin: 10px;">
+              <label for="apellido" class="labelText">Apellido:</label>
+              <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" [(ngModel)]="cuadroApellido">
+            </div>
+                  
+            <div class="form-group col-md-2" style="margin: 10px;">
+              <label for="nombre" class="labelText">Nombre:</label>
+              <input type="text" name="nombre" id="nombre" placeholder="Nombres" class="form-control" [(ngModel)]="cuadroNombre">
+            </div>
+                  
+            <div class="form-group col-md-2" style="margin: 10px;">
+              <label for="dni" class="labelText">DNI:</label>
+              <input type="text" name="dni" id="dni" placeholder="" class="form-control" [(ngModel)]="cuadroDni">
+            </div>
+                  
+            <div class="form-group col-md-2" style="margin: 10px;">
+              <label for="fechaNac" class="labelText">Fecha de Nacimiento:</label>
+              <input type="date" name="fechaNac" id="fechaNac" placeholder="" class="form-control" [(ngModel)]="cuadroFechaNac">
+            </div>
+                  
+            <div class="form-group col-md-2" style="margin: 10px;">
+              <label for="telefono" class="labelText">Telefono:</label>
+              <input type="text" name="telefono" id="telefono" placeholder="Telefono" class="form-control" [(ngModel)]="cuadroTelefono">
+            </div>
+                  
+            <div class="form-group col-md-3" style="margin: 10px;">
+              <label for="domicilio" class="labelText">Domicilio:</label>
+              <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio" class="form-control" [(ngModel)]="cuadroDomicilio">
+            </div>
+                  
+            <div class="form-group col-md-2" style="margin: 10px;">
+              <label for="fechaIns" class="labelText">Fecha de Ingreso:</label>
+              <input type="date" name="fechaIns" id="fechaIns" placeholder="Fecha de Inscripcion" class="form-control" [(ngModel)]="cuadroFechaIns">
+            </div>
+                    
+            <div class="form-group col-md-2" style="margin: 10px;">
+              <label for="email" class="labelText">Email:</label>
+              <input type="email" name="email" id="email" placeholder="Email" class="form-control" [(ngModel)]="cuadroCargo">
+            </div>
+                  
+            
+          </form>
+        </div>    
+           
+      </div>
     
-  </div>
-
-  <div>
-    <div class="col" style="text-align: right;">
-      <button type="submit" class="btn btn-success" style="width: 15%;" (click)="agregarSocio()">Agregar</button>
-      <button class="btn btn-primary" style="background-color: red; margin: 5px; width: 15%;" (click)="cancelar()">Cancelar</button>
+      <div class="row" style="margin: 10px; width: 60%;">
+        <div class="form-group col" style="margin: 5px; width: 40%;">
+          <label for="cuota" class="labelText">Cuota:</label>
+          <input  type="number" name="cuota" id="cuota" placeholder="Cuota" class="form-control" [(ngModel)]="cuadroCuota">
+        </div>
+    
+        <div class="form-group col" style="margin: 5px; width: 40%;">
+          <label for="fechapago" class="labelText">Fecha de Pago:</label>
+          <input type="date" name="fechapago" id="fechapago" placeholder="" class="form-control" [(ngModel)]="cuadroFechaPago">
+        </div> 
+    
+        <div class="form-group col" style="margin: 5px; width: 50%;">
+          <label for="fechapago" class="labelText">Recibo:</label>
+          <input type="text" name="fechapago" id="fechapago" placeholder="N° de Recibo" class="form-control" [(ngModel)]="cuadroRecibo">
+        </div>   
+    
+        <div class="form-group col" style="margin: 5px; width: 40%;">
+          <label for="fechaEstudios" class="labelText">Fecha de Estudios:</label>
+          <input type="date" name="fechaEstudios" id="fechaEstudios" placeholder="" class="form-control" [(ngModel)]="cuadroEstudios">
+        </div>
+        
+      </div>
+    
+      <div>
+        <div class="col" style="text-align: right;">
+          <button type="submit" class="btn btn-success" style="width: 15%;" (click)="agregarSocio()">Agregar</button>
+          <button class="btn btn-primary" style="background-color: red; margin: 5px; width: 15%;" (click)="cancelar()">Cancelar</button>
+        </div>
+      </div>
+      
+    
     </div>
-  </div>
-  
+    </div>
+    
+  </body>
 
-</div>
-</div>
+
+</html>
+

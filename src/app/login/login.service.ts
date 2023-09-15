@@ -25,6 +25,7 @@ export class LoginService{
                         this.token = token;
                         this.cookie.set("token", this.token);
                         this.router.navigate(['/socios']);
+                        console.log('TOKEN:' + this.token);
                     }
                 )
             }
@@ -47,7 +48,7 @@ export class LoginService{
             ()=>{
                 this.token="";
                 this.cookie.set("token",this.token);
-                this.router.navigate(['/']);
+                this.router.navigate(['']);
             }
         )
     }

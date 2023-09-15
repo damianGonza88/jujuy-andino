@@ -34,7 +34,8 @@ export class ComponenteActualizarComponent {
     this.cuadroFechaIns = socio.fechaIns;
     this.cuadroCuotaA;
     this.cuadroFechaPagoA;
-    this.cuadroCargo = socio.cargo;
+    this.cuadroReciboA;
+    this.cuadroEmail = socio.email;
     this.cuadroEstudios = socio.estudios;
   }
 
@@ -47,17 +48,19 @@ export class ComponenteActualizarComponent {
   cuadroFechaIns:string = new Date().toDateString();
   cuadroCuotaA: number=0;
   cuadroFechaPagoA:string = new Date().toDateString();
+  cuadroReciboA: string ="";
   cuadroDomicilio: string="";
   cuadroTelefono: string="";
-  cuadroCargo: string="";
-  cuadroEstudios:boolean = false;
+  cuadroEmail: string="";
+  cuadroEstudios:string = new Date().toDateString();
+ 
 
   indice:number=0;
 
   actualizarSocio(){    
      
     let pago = this.socios[this.indice].cuota;
-    let miSocio= new Socio(this.cuadroApellido, this.cuadroNombre, this.cuadroDni, this.cuadroFechaNac, this.cuadroFechaIns, pago, this.cuadroDomicilio, this.cuadroTelefono, this.cuadroCargo, this.cuadroEstudios, false );
+    let miSocio= new Socio(this.cuadroApellido, this.cuadroNombre, this.cuadroDni, this.cuadroFechaNac, this.cuadroFechaIns, pago, this.cuadroDomicilio, this.cuadroTelefono, this.cuadroEmail, this.cuadroEstudios, false );
     this.socioService.actualizarSocioServicio(this.indice, miSocio);
     alert("Se modifico correctamente al socio: " + miSocio.apellido +", "+ miSocio.nombre);
     this.router.navigate(['socios']);
@@ -78,11 +81,11 @@ export class ComponenteActualizarComponent {
   agregarPago(){
 
     let cuota = this.socios[this.indice].cuota;
-    let pago = new Pago(this.cuadroFechaPagoA,this.cuadroCuotaA);
+    let pago = new Pago(this.cuadroFechaPagoA,this.cuadroCuotaA, this.cuadroReciboA);
     cuota.push(pago);
     cuota.sort((a,b)=> (Date.parse(b.fecha)) - (Date.parse(a.fecha)));
 
-    let miSocio= new Socio(this.cuadroApellido, this.cuadroNombre, this.cuadroDni, this.cuadroFechaNac, this.cuadroFechaIns, cuota, this.cuadroDomicilio, this.cuadroTelefono, this.cuadroCargo, this.cuadroEstudios, false);
+    let miSocio= new Socio(this.cuadroApellido, this.cuadroNombre, this.cuadroDni, this.cuadroFechaNac, this.cuadroFechaIns, cuota, this.cuadroDomicilio, this.cuadroTelefono, this.cuadroEmail, this.cuadroEstudios, false);
     this.socioService.actualizarSocioServicio(this.indice, miSocio);
 
     this.router.navigate(['/actualizar', this.indice])
@@ -95,7 +98,7 @@ export class ComponenteActualizarComponent {
       let cuota = this.socios[this.indice].cuota;
     cuota.splice(i,1);
 
-    let miSocio= new Socio(this.cuadroApellido, this.cuadroNombre, this.cuadroDni, this.cuadroFechaNac, this.cuadroFechaIns, cuota, this.cuadroDomicilio, this.cuadroTelefono, this.cuadroCargo, this.cuadroEstudios,false);
+    let miSocio= new Socio(this.cuadroApellido, this.cuadroNombre, this.cuadroDni, this.cuadroFechaNac, this.cuadroFechaIns, cuota, this.cuadroDomicilio, this.cuadroTelefono, this.cuadroEmail, this.cuadroEstudios,false);
     this.socioService.actualizarSocioServicio(this.indice, miSocio);
 
     this.router.navigate(['/actualizar', this.indice])
@@ -103,9 +106,7 @@ export class ComponenteActualizarComponent {
     } else {
       
     }
-
     
   }
-
 
 }

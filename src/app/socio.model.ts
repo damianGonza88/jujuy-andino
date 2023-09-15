@@ -3,7 +3,7 @@ import { Pago } from "./pago.model";
 export class Socio{
 
     constructor(apellido:string, nombre: string, dni:number, fechaNac:string, fechaIns:string, cuotaN:Pago[],
-    domicilio: string, telefono: string, cargo:string, estudios:boolean, checked:boolean){
+    domicilio: string, telefono: string, email:string, estudios:string, checked:boolean){
 
         this.nombre=nombre;
         this.apellido=apellido;
@@ -13,7 +13,7 @@ export class Socio{
         this.cuota = cuotaN;
         this.domicilio=domicilio;
         this.telefono=telefono;
-        this.cargo = cargo;
+        this.email = email;
         this.checked = checked;
         this.estudios = estudios;
 
@@ -27,9 +27,9 @@ export class Socio{
     cuota: Pago[] = [];
     domicilio: string="";
     telefono: string="";
-    cargo: string="";
+    email: string="";
     checked:boolean=false;
-    estudios:boolean=false;
+    estudios:string="";
 
    
 

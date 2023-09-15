@@ -1,22 +1,33 @@
 
-<div  >
+<html>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       
-      <img class="logo" style="margin-right: 10px;" src="assets/img/logo1.jpg" alt="Logo">
+      <img class="logo" style="margin-right: 30px;" src="assets/img/logo1.jpg" alt="Logo">
       
-      <a class="navbar-brand efecto" style="color: rgb(19, 12, 80); font-weight: bold;" href="#">Inicio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarText">
+
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
           <li class="nav-item">
-            <a class="nav-link active efecto" style="font-weight: bold; color: black; font-size: large; " href="/socios">Socios</a>
+            <a class="nav-link efecto" id="inicio" style="font-weight: bold; color: black; font-size: large; " href="/">Inicio</a>
           </li>
+
           <li class="nav-item">
+            <a class="nav-link efecto" id="socios" style="font-weight: bold; color: black; font-size: large; " href="/socios">Socios</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link efecto" id="contable" style="font-weight: bold; color: black; font-size: large;" href="/contable">Contable</a>
+          </li>
+
+          <!-- <li class="nav-item">
             <a class="nav-link efecto" style="font-weight: bold; color: black; font-size: large;" href="/contacto">Contacto</a>
-          </li>
+          </li> -->
           
         </ul>
         <span class="navbar-text">
@@ -26,6 +37,8 @@
       </div>
     </div>
   </nav>
-</div>
+</html>
+
+
 
 <router-outlet></router-outlet>

@@ -36,13 +36,14 @@ export class ComponenteAgregarComponent {
   cuadroFechaIns:string = new Date().toDateString();;  
   cuadroCuota: number = 0;
   cuadroFechaPago:string = new Date().toDateString();
+  cuadroRecibo:string="";
   cuadroDomicilio: string="";
   cuadroTelefono: string="";
   cuadroCargo: string="";
-  cuadroEstudios: boolean= false;
+  cuadroEstudios: string = new Date().toDateString();
 
   agregarSocio(){
-    let pago = new Pago(this.cuadroFechaPago,this.cuadroCuota);
+    let pago = new Pago(this.cuadroFechaPago,this.cuadroCuota, this.cuadroRecibo);
     let cuota: Pago []=[];
     cuota.push(pago);
     let miSocio= new Socio(this.cuadroApellido, this.cuadroNombre, this.cuadroDni, this.cuadroFechaNac, this.cuadroFechaIns, cuota, this.cuadroDomicilio, this.cuadroTelefono, this.cuadroCargo,this.cuadroEstudios, false);

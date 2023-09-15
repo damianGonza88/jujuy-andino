@@ -48,7 +48,7 @@ export class SocioService{
         socioModificado.telefono = socio.telefono;
         socioModificado.fechaIns = socio.fechaIns;
         socioModificado.cuota = socio.cuota;
-        socioModificado.cargo = socio.cargo;
+        socioModificado.email = socio.email;
         socioModificado.estudios = socio.estudios;
         socioModificado.checked = socio.checked;
 

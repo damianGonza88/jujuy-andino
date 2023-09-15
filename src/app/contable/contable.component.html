@@ -1,0 +1,130 @@
+<body>
+  <div style="margin-top: 100px; display: flex; justify-content: center; ">
+    <img src="/assets/img/mantenimiento.png" alt="" style="width: 40%; height: 40%;">
+  </div>
+</body>
+
+
+<!-- <div style="background-color: rgb(19, 12, 80) !important; height: 100%;">
+    <br>
+    <h1 style="text-align: center; color: aliceblue; font-size: 2vw;"> Socios Jujuy Andino</h1>  
+    <br>
+    
+    
+    <div class="container" style="margin-left: 10px;">
+      <div class="row">
+
+        <form class="form-group row" style="margin: 5px;">
+  
+          <div class="form-group col-md-2" style="margin: 5px;">
+            <label for="apellido" class="labelText">Fecha:</label>
+            <input type="date" name="apellido" id="apellido" placeholder="Fecha" class="form-control" [(ngModel)]="cuadroFechaCaja">
+          </div>
+                
+          <div class="form-group col-md-3" style="margin: 5px;">
+            <label for="nombre" class="labelText">Detalle:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Detalle" class="form-control" [(ngModel)]="cuadroDetalleCaja">
+          </div>
+                
+          <div class="form-group col-md-2" style="margin: 5px;">
+            <label for="dni" class="labelText">Recibo:</label>
+            <input type="text" name="dni" id="dni" placeholder="Recibo" class="form-control" [(ngModel)]="cuadroReciboCaja">
+          </div>
+                
+          <div class="form-group col-md-2" style="margin: 5px;">
+            <label for="fechaNac" class="labelText">Ingreso:</label>
+            <input type="number" name="fechaNac" id="fechaNac" placeholder="$" class="form-control" [(ngModel)]="cuadroIngreso">
+          </div>
+                
+          <div class="form-group col-md-2" style="margin: 5px;">
+            <label for="telefono" class="labelText">Egreso:</label>
+            <input type="number" name="telefono" id="telefono" placeholder="$" class="form-control" [(ngModel)]="cuadroEgreso">
+          </div>         
+          
+          
+        </form>
+
+        <div class="" style="margin: 5px; display: flex; justify-content: right;">
+          <button type="submit" class="btn btn-success" (click)="agregarRegistro()">Agregar Registro</button>
+        </div>
+
+
+        <div>
+          <label for="buscar" style="color: white; font-size: medium;">Buscar: </label>
+          <input type="search" class="input" name="buscarApellido" id="buscador" placeholder="Detalle" style="margin-left: 2%; border-radius: 10px; height: 60%; padding: 10px;">
+          
+        </div>                
+  
+        <br><br><br>
+  
+        <div >
+  
+          <mat-table [dataSource]= "dataSource |  filter:filterPost" class="mat-elevation-z8" matSort matTableExporter #exporter="matTableExporter" style="font-weight: bold;">          
+                
+            
+           
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef>#</th>
+              <td mat-cell *matCellDef="let registro">{{caja.indexOf(registro)+1}}</td>
+            </ng-container>
+            
+           
+            <ng-container matColumnDef="fecha">
+              <th class="textoTabla" mat-header-cell *matHeaderCellDef>Fecha</th>
+              <td class="textoTabla" mat-cell *matCellDef="let registro">{{registro.fecha}}</td>
+            </ng-container>
+            
+            
+            <ng-container matColumnDef="detalle">
+              <th class="textoTabla" mat-header-cell *matHeaderCellDef>Detalle</th>
+              <td class="textoTabla" mat-cell *matCellDef="let registro">{{registro.detalle}}</td>
+            </ng-container>
+            
+            
+            <ng-container matColumnDef="recibo">
+              <th class="textoTabla" mat-header-cell *matHeaderCellDef>Recibo</th>
+              <td class="textoTabla" mat-cell *matCellDef="let registro">{{registro.recibo}}</td>
+            </ng-container>
+  
+            
+            <ng-container matColumnDef="ingreso">
+              <th class="textoTabla" mat-header-cell *matHeaderCellDef>Ingreso</th>
+              <td class="textoTabla" mat-cell *matCellDef="let registro">{{registro.ingreso}}</td>
+            </ng-container>
+  
+            
+            <ng-container matColumnDef="egreso">
+              <th class="textoTabla" mat-header-cell *matHeaderCellDef>Egreso</th>
+              <td class="textoTabla" mat-cell *matCellDef="let registro">{{registro.egreso}} </td>
+            </ng-container>
+  
+            
+            <ng-container matColumnDef="saldo">
+              <th class="textoTabla" mat-header-cell *matHeaderCellDef>Saldo</th>
+              <td class="textoTabla" mat-cell *matCellDef="let registro"></td>
+            </ng-container>
+  
+                       
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>   
+                        
+  
+          </mat-table>
+  
+          <button class="btn violet mt-2" mat-raised-button color="primary" (click)="exporter.exportTable('xlsx', {fileName:'Socios'})" style="background-color: aqua;">Descargar Excel</button>
+  
+            
+        </div>
+    
+      </div>
+    
+    </div>
+  
+    <br><br>
+  
+    <div style="text-align: center;">
+      <button class="btn btn-primary" (click)="volverInicio()">Ir al Inicio</button>
+    </div>
+    
+  </div> 
+   -->
